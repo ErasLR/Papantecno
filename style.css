@@ -2083,3 +2083,780 @@ h1 {
             0.78rem;
     }
 }
+/* =====================================================
+   HEADER RESPONSIVE CON MENÚ DESPLEGABLE
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--primario);
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 25px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo-img {
+    width: var(--logo-size);
+    height: var(--logo-size);
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN DESKTOP
+===================================================== */
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+
+    color: white !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 11px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition: .25s ease;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,.15);
+
+    color: white !important;
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    padding: 10px 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.menu-toggle:hover {
+    background: rgba(255,255,255,.20);
+}
+
+
+/* =====================================================
+   WHATSAPP DEL HEADER
+===================================================== */
+
+.header-whatsapp {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: var(--whatsapp);
+
+    color: white !important;
+
+    text-decoration: none !important;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition: .25s ease;
+}
+
+.header-whatsapp:hover {
+    transform: translateY(-1px);
+
+    filter: brightness(.95);
+
+    color: white !important;
+}
+
+.header-whatsapp i {
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 9px 18px;
+    }
+
+    .logo-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    nav ul {
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 9px 8px;
+    }
+
+    .header-whatsapp {
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES
+===================================================== */
+
+@media (max-width: 800px) {
+
+    header {
+        position: sticky;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        padding: 8px 12px;
+
+        gap: 8px;
+    }
+
+
+    /* Logo */
+
+    .logo-container {
+        margin-right: auto;
+    }
+
+    .logo-img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /* Mostrar botón menú */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* WhatsApp queda junto al menú */
+
+    .header-whatsapp {
+        display: flex;
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* Ocultar menú inicialmente */
+
+    nav {
+        display: none;
+
+        width: 100%;
+
+        flex-basis: 100%;
+
+        order: 10;
+
+        background: var(--primario);
+
+        border-top: 1px solid rgba(255,255,255,.15);
+
+        padding-top: 8px;
+    }
+
+
+    /* Menú abierto */
+
+    nav.active {
+        display: block;
+    }
+
+
+    nav ul {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 6px;
+
+        padding: 5px 0 10px;
+    }
+
+
+    nav li {
+        width: 100%;
+    }
+
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+
+        background: rgba(255,255,255,.08);
+
+        padding: 11px 6px;
+
+        font-size: 13px;
+    }
+
+
+    nav a:hover {
+        background: rgba(255,255,255,.18);
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 7px 10px;
+    }
+
+    .logo-img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .menu-toggle {
+        padding: 9px 11px;
+
+        font-size: 14px;
+    }
+
+    .header-whatsapp {
+        padding: 9px 10px;
+
+        font-size: 12px;
+    }
+
+    .header-whatsapp i {
+        font-size: 16px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+
+        padding: 10px 4px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES MUY PEQUEÑOS
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .menu-toggle span {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 38px;
+
+        padding: 0;
+    }
+
+    .header-whatsapp span {
+        display: none;
+    }
+
+    .header-whatsapp {
+        width: 42px;
+        height: 38px;
+
+        padding: 0;
+    }
+
+    .header-whatsapp i {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+}
+/* =====================================================
+   HEADER PAPANTECNO
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--primario);
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 25px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.logo-img {
+    width: var(--logo-size);
+    height: var(--logo-size);
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =====================================================
+   MENÚ DESKTOP
+===================================================== */
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+
+    color: white !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 11px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+
+    transition: background .2s ease;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,.15);
+
+    color: white !important;
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 9px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background: rgba(255,255,255,.15);
+}
+
+
+/* =====================================================
+   BOTÓN WHATSAPP
+===================================================== */
+
+.header-whatsapp {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: var(--whatsapp);
+
+    color: white !important;
+
+    text-decoration: none !important;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    padding: 10px 13px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+}
+
+.header-whatsapp:hover {
+    color: white !important;
+
+    filter: brightness(.95);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 9px 18px;
+    }
+
+    .logo-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 7px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 800px) {
+
+    header {
+        position: sticky;
+        top: 0;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        padding: 7px 12px;
+
+        gap: 7px;
+
+        background: var(--primario);
+    }
+
+
+    /* LOGO */
+
+    .logo-container {
+        margin-right: auto;
+    }
+
+    .logo-img {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    /* MOSTRAR BOTÓN MENÚ */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* WHATSAPP */
+
+    .header-whatsapp {
+        display: flex;
+
+        padding: 9px 11px;
+
+        font-size: 12px;
+    }
+
+
+    /* =================================================
+       BARRA DEL MENÚ
+    ================================================= */
+
+    nav {
+        display: none;
+
+        flex-basis: 100%;
+
+        width: 100%;
+
+        flex: none;
+
+        order: 10;
+
+        margin-top: 3px;
+
+        padding-top: 7px;
+
+        border-top: 1px solid rgba(255,255,255,.18);
+    }
+
+
+    /* CUANDO SE ABRE */
+
+    nav.active {
+        display: block;
+    }
+
+
+    /* OPCIONES DEL MENÚ */
+
+    nav ul {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+
+        width: 100%;
+
+        padding: 3px 0 5px;
+    }
+
+
+    nav li {
+        width: 100%;
+    }
+
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+
+        background: rgba(255,255,255,.08);
+
+        color: white !important;
+
+        padding: 10px 5px;
+
+        font-size: 12px;
+
+        border-radius: 6px;
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,.18);
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUEÑO
+===================================================== */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 6px 9px;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-toggle {
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+    .header-whatsapp {
+        padding: 8px 9px;
+
+        font-size: 11px;
+    }
+
+    nav a {
+        font-size: 11px;
+
+        padding: 9px 4px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR MUY PEQUEÑO
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .menu-toggle span {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 36px;
+
+        padding: 0;
+    }
+
+    .header-whatsapp span {
+        display: none;
+    }
+
+    .header-whatsapp {
+        width: 40px;
+        height: 36px;
+
+        padding: 0;
+    }
+
+}
