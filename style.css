@@ -44,7 +44,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    padding: 0.8rem 2rem;
+    padding: 1rem; /* Mejor ajustar para móviles */
     background-color: rgba(6, 27, 47, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
@@ -75,8 +75,8 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
     list-style: none;
+    gap: 1.5rem;
 }
 
 nav a {
@@ -148,7 +148,7 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(1.8rem, 3vw + 1rem, 2.8rem); /* Responsive */
     color: #fff;
     margin-bottom: 1rem;
 }
@@ -211,7 +211,7 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-size: clamp(1.4rem, 3vw + 0.5rem, 2rem); /* Responsive */
     color: var(--primario);
     margin-bottom: 2rem;
 }
@@ -610,30 +610,31 @@ summary {
    RESPONSIVE
    ================================================== */
 
-.container {
-    max-width: 1200px; /* Limit max width */
-    margin: 0 auto;    /* Center align */
-    padding: 0 1rem;   /* Padding for smaller screens */
-}
+/* Media Queries para mayor adaptabilidad */
 
 @media (max-width: 1200px) {
     header {
-        padding: 1rem; /* Adjust padding for larger screens */
+        padding: 1rem;
     }
 
     nav ul {
-        gap: 1rem; /* Reduce space */
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.75rem 1.5rem; /* Ajustar botones */
     }
 }
 
 @media (max-width: 960px) {
-    .btn-primary,
-    .btn-secondary {
-        padding: 0.75rem 1.5rem; /* Adjust button padding */
+    .hero {
+        padding: 1.5rem 1rem; /* Ajustar padding para hero */
+        min-height: 70vh; /* Ajuste para pantallas más pequeñas */
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation items */
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
     }
 }
 
@@ -644,43 +645,35 @@ summary {
     }
 
     .menu-toggle {
-        display: block; /* Show menu toggle */
-        margin-left: auto;
+        display: block;
     }
 
     nav {
         order: 3;
         width: 100%;
-        margin-left: 0;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background-color: rgba(6, 27, 47, 0.98);
-        max-height: 0; /* Hidden by default */
+        max-height: 0;
         overflow: hidden;
         transition: max-height 0.35s ease;
     }
 
     nav ul {
-        flex-direction: column; /* Stack menu items */
-        background-color: rgba(6, 27, 47, 0.98);
+        flex-direction: column; 
         padding: 0;
-        gap: 0.9rem;
-        border-bottom: 2px solid rgba(246, 243, 241, 0.35);
+        gap: 0.9rem; 
     }
 
     nav ul.active {
-        max-height: 700px; /* Show menu */
+        max-height: 700px; 
         padding: 1.2rem 0;
     }
 
-    .hero {
-        background-attachment: scroll; /* Change background behavior */
-    }
-
     .mapa-wrapper iframe {
-        height: 280px; /* Smaller iframe on small screens */
+        height: 280px; /* Ajuste del iframe */
     }
 }
 
@@ -688,19 +681,23 @@ summary {
     .detalle,
     .faq,
     .videos {
-        padding: 20px; /* Less padding on small screens */
+        padding: 20px;
+    }
+
+    .btn-regresar {
+        width: 100%; /* Botón a ancho completo en móviles */
     }
 }
 
 h1 {
-    color: white !important; /* Force white color for h1 */
+    color: white !important;
 }
 
 .video-tiktok {
     display: block;
-    width: 100%; 
-    max-width: 500px; 
-    margin: 25px auto; 
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto;
     text-decoration: none;
 }
 
@@ -713,8 +710,8 @@ h1 {
 }
 
 .video-portada img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -748,8 +745,8 @@ h1 {
 }
 
 .horarios-imagenes img {
-    width: 800px; 
-    height: auto; 
-    border-radius: 12px; 
+    width: 800px;
+    height: auto;
+    border-radius: 12px;
     object-fit: contain;
 }
