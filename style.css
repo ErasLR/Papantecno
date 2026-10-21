@@ -32,13 +32,13 @@
        ✅ Cada línea controla un tamaño específico.
        ===================================================== */
 
-    --logo-header-pc:       100px;   /* 🔹 HEADER en PC / Laptop        */
-    --logo-header-tablet:   100px;   /* 🔹 HEADER en Tablet              */
-    --logo-header-mobile:   120px;   /* 🔹 HEADER en Celular             */
-    --logo-header-mini:     40px;   /* 🔹 HEADER en Celular muy pequeño */
+    --logo-header-pc:       130px;   /* 🔹 HEADER en PC / Laptop        */
+    --logo-header-tablet:   130px;   /* 🔹 HEADER en Tablet              */
+    --logo-header-mobile:   130px;   /* 🔹 HEADER en Celular             */
+    --logo-header-mini:     100px;   /* 🔹 HEADER en Celular muy pequeño */
 
-    --logo-footer-size:     140px;   /* 🔹 FOOTER (logo centrado abajo)  */
-    --logo-footer-mobile:   100px;   /* 🔹 FOOTER en celular             */
+    --logo-footer-size:     150px;   /* 🔹 FOOTER (logo centrado abajo)  */
+    --logo-footer-mobile:   160px;   /* 🔹 FOOTER en celular             */
 
     /* ---------- FONDO DEL HERO ---------- */
     --hero-bg: url('/Papantecno/assets/papantecno.png');
