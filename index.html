@@ -6,7 +6,6 @@
   <title>PAPANTECNO | Servicio Técnico y Tecnología en Papantla</title>
   <meta name="description" content="Reparación de computadoras, laptops, impresoras, celulares e instalación de cámaras de seguridad en Papantla. Solicita tu servicio por WhatsApp.">
 
-  <!-- Rutas relativas: asegúrate de tener la carpeta 'assets' -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -14,20 +13,13 @@
 <body>
 
  <header>
-  <a href="#inicio" class="logo-container">
-    <img src="assets/logo.png" alt="PAPANTECNO Logo" class="logo-img">
-  </a>
-
+  <!-- Botón Hamburguesa a la izquierda -->
   <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
     <i class="fas fa-bars"></i>
     <span>Menú</span>
   </button>
 
-  <a class="header-whatsapp" href="https://wa.me/527841021893?text=Hola%20PAPANTECNO,%20quiero%20solicitar%20un%20servicio" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i>
-    <span>Solicitar servicio</span>
-  </a>
-
+  <!-- Navegación -->
   <nav id="mainNav">
     <ul id="menu">
       <li><a href="#inicio">Inicio</a></li>
@@ -35,16 +27,27 @@
       <li><a href="#productos">Productos</a></li>
       <li><a href="#camaras">Cámaras</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#horarios">Horarios</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
+
+  <!-- Botón de WhatsApp a la derecha -->
+  <a class="header-whatsapp" href="https://wa.me/527841021893?text=Hola%20PAPANTECNO,%20quiero%20solicitar%20un%20servicio" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span>Solicitar servicio</span>
+  </a>
 </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== HERO (Logo gigante aquí) ===== -->
   <section class="hero" id="inicio">
     <div class="hero-overlay">
+      
+      <!-- LOGO GIGANTE EN BIENVENIDA -->
+      <img src="assets/logo.png" alt="PAPANTECNO Logo" class="hero-logo">
+
       <h1>Bienvenido a <span>PAPANTECNO</span></h1>
       <p>Tu solución en reparación de computadoras, laptops, impresoras, celulares e instalación de cámaras de seguridad. Servicio profesional, rápido y confiable en Papantla.</p>
       <div class="hero-buttons">
@@ -136,7 +139,7 @@
     </div>
 </section>
 
-  <!-- ===== NOSOTROS ===== -->
+  <!-- ===== NOSOTROS (sin logo) ===== -->
   <section id="nosotros">
     <h2>👨‍🔧 Nosotros</h2>
     <p class="nosotros-texto">
@@ -146,7 +149,8 @@
     </p>
   </section>
 
-<section class="horarios">
+<!-- ===== HORARIOS ===== -->
+<section id="horarios" class="horarios">
     <h2>Horarios</h2>
     <div class="horarios-imagenes">
         <img src="assets/horarios.jpg" alt="Horario de servicio">
