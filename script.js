@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
-  // 1. MENÚ HAMBURGUESA (Lógica corregida)
+  // 1. MENÚ HAMBURGUESA
   // ==========================================
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav'); 
@@ -9,10 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', () => {
-      // Aplica la clase .active al <nav> para que el CSS lo muestre
       mainNav.classList.toggle('active');
       
-      // Cambiar icono a "X" al abrir
       if (menuIcon) {
         if (mainNav.classList.contains('active')) {
           menuIcon.classList.replace('fa-bars', 'fa-times');
@@ -23,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Cierra el menú automáticamente al hacer clic en un enlace
+  // Cierra el menú automáticamente si haces clic en un enlace
   const navLinks = document.querySelectorAll('nav ul li a');
   navLinks.forEach(enlace => {
     enlace.addEventListener('click', () => {
